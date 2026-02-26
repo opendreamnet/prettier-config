@@ -16,6 +16,9 @@
     "name": "Ivan Bravo Bravo",
     "email": "ivan@opendreamnet.com"
   },
+  "repository": {
+    "url": "https://github.com/opendreamnet/prettier-config"
+  },
   "files": [
     "index.js"
   ],
