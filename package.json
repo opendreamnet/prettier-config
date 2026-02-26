@@ -5,8 +5,12 @@
   "module": "index.ts",
   "exports": "./index.js",
   "license": "MIT",
+  "release-it": {
+    "extends": "github:opendreamnet/release-it-config"
+  },
   "scripts": {
-    "build": "bun build ./index.ts --target=bun --outfile=index.js"
+    "build": "bun build ./index.ts --target=bun --outfile=index.js",
+    "release": "release-it"
   },
   "author": {
     "name": "Ivan Bravo Bravo",
@@ -19,8 +23,10 @@
     "access": "public"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^10.0.5",
     "@tsconfig/bun": "^1.0.10",
     "@types/bun": "latest",
+    "release-it": "^19.2.4",
     "typescript": "^5"
   },
   "peerDependencies": {
