@@ -17,7 +17,7 @@
     "email": "ivan@opendreamnet.com"
   },
   "repository": {
-    "url": "https://github.com/opendreamnet/prettier-config"
+    "url": "git+https://github.com/opendreamnet/prettier-config.git"
   },
   "files": [
     "index.js"
