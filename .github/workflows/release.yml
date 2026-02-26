@@ -1,0 +1,36 @@
+name: release
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+  push:
+    tags: [v*]
+
+# Required for OIDC
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    name: Publish on NPM
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📁 Checkout
+        uses: actions/checkout@v6
+
+      - name: 📦 Install bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: 👨🏻‍💻 Install Dependencies
+        run: bun install --frozen-lockfile
+
+      - name: ✨ Build
+        run: bun run build
+
+      - name: 🚀 Publish
+        run: bun publish --tolerate-republish

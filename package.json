@@ -1,0 +1,30 @@
+{
+  "name": "@opendreamnet/prettier-config",
+  "version": "0.1.0",
+  "type": "module",
+  "module": "index.ts",
+  "exports": "./index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "bun build ./index.ts --target=bun --outfile=index.js"
+  },
+  "author": {
+    "name": "Ivan Bravo Bravo",
+    "email": "ivan@opendreamnet.com"
+  },
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@tsconfig/bun": "^1.0.10",
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "prettier": "^3",
+    "@prettier/plugin-oxc": "^0.1"
+  }
+}
