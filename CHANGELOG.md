@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.3](https://github.com/opendreamnet/prettier-config/compare/v0.1.2...v0.1.3) (2026-03-31)
+
+### Chores
+
+* increased `printWidth` from 60 to 80 ([a030509](https://github.com/opendreamnet/prettier-config/commit/a030509182e9e43c6a8f865a7eedaabb29bb82c3))
+
 ## [0.1.2](https://github.com/opendreamnet/prettier-config/compare/v0.1.1...v0.1.2) (2026-02-26)
 
 ### Bug Fixes
