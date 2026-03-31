@@ -6,7 +6,7 @@ const config: Config = {
   singleQuote: true,
   singleAttributePerLine: true,
   bracketSameLine: true,
-  printWidth: 60,
+  printWidth: 80,
   plugins: [
     '@prettier/plugin-oxc'
   ]
