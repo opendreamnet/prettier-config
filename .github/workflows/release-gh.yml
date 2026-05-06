@@ -1,4 +1,4 @@
-name: Release on NPM
+name: Release on GitHub Packages
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}
@@ -9,14 +9,13 @@ on:
   push:
     tags: [v*]
 
-# Required for OIDC
 permissions:
-  id-token: write
   contents: read
+  packages: write
 
 jobs:
   publish:
-    name: Publish on NPM
+    name: Publish on GitHub Packages
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +29,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: lts/*
+          registry-url: https://npm.pkg.github.com
           scope: "@opendreamnet"
 
       - name: 👨🏻‍💻 Install Dependencies
@@ -38,5 +38,9 @@ jobs:
       - name: 🏗️ Build
         run: bun run build
 
+      # https://github.com/oven-sh/bun/issues/24124 
       - name: 🚀 Publish
-        run: bun x npm publish --provenance
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     
