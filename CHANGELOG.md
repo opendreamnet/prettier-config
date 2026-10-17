@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.0](https://github.com/opendreamnet/prettier-config/compare/v0.1.3...v0.2.0) (2026-10-17)
+
+### Code Refactoring
+
+* **config:** publish Prettier preset as a CommonJS config file ([3ebe8a0](https://github.com/opendreamnet/prettier-config/commit/3ebe8a0c815176f3c8123019175e79b65a158ce9))
+
+### Continuous Integration
+
+* added workflow to publish on github packages ([5dd4b8e](https://github.com/opendreamnet/prettier-config/commit/5dd4b8e58044c25109f9612c46f5b0905c74cb83))
+* **release:** publish packages with pnpm ([e77d359](https://github.com/opendreamnet/prettier-config/commit/e77d3598213f432466a16ec37fa78c5dd823d9fe))
+
 ## [0.1.3](https://github.com/opendreamnet/prettier-config/compare/v0.1.2...v0.1.3) (2026-03-31)
 
 ### Chores
